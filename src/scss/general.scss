@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1C121F;
+}
+
+.container {
+    max-width: 1310px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn {
+    background: rgba(233, 215, 167, 0.1);
+    border: 1px solid $main-yellow;  
+    max-width: 257px;
+    width: 100%;
+    font-size: 28px;
+    padding: 24px 0;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background: rgba(233, 215, 167, 0);
+    }
+
+    &:active {
+        background: rgba(43, 42, 41, 0.807);
+    }
+}

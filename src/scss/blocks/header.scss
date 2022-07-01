@@ -1,0 +1,202 @@
+.header {
+    font-family: 'WorkSans', sans-serif;
+    position: absolute;
+    width: 100%;
+    top: 0;
+
+    &_active {
+        
+        .header__nav-holder {
+            visibility: visible;
+            opacity: 1;
+            
+            transform: translateY(0);
+        }
+
+        .header__nav-opener {
+            &::before {
+                transform: rotate(45deg);
+                top: 8px;
+            }
+        
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 8px;
+            }
+        
+            & span {
+                display: none;
+            }
+        }
+    }
+
+    &__container {
+        padding-top: 34px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-holder {
+        max-width: 48px;
+        width: 100%;
+
+        @media(min-width: $tablet) {
+            max-width: 66px;
+        }
+    }
+
+    &__nav-holder {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        padding: 140px 45px 20px;
+        background: rgba(79, 70, 78, 0.45);
+        backdrop-filter: blur(30px);
+        height: 100vh;
+
+        transition: all 0.4s ease-in-out;
+        transform: translateY(-100%);
+
+        @media(min-width: $tablet) {
+            visibility: visible;
+            opacity: 1;
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0;
+            background: transparent;
+            transform: translateY(0);
+
+            display: flex;
+            
+        }
+    }
+
+    
+
+    &__nav-list {
+        margin-bottom: 80px;
+        text-align: center;
+
+        @media(min-width: $tablet) {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            margin: 0 10px 0 -40px;
+        }
+
+        @media(min-width: $tabletLarge) {
+            margin: 0 100px 0 -40px;
+        }
+
+        @media(min-width: $desktopMedium) {
+            margin: 0 160px 0 -40px;
+        }
+    }
+
+    &__nav-item {
+        margin-bottom: 45px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        @media(min-width: $tablet) {
+            margin: 0;
+            padding: 0 40px;
+        }
+    }
+
+    &__nav-link {
+        max-width: 300px;
+        font-size: 30px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+            color: $main-yellow;
+        }
+
+        @media(min-width: $tablet) {
+            font-size: 18px;
+        }
+    }
+
+    .header__nav-link_active {
+        color: $main-yellow;
+        position: relative;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            right: 0;
+
+            background-color: $main-yellow;
+            height: 2px;
+            width: 100%;
+
+        }
+    }
+
+    .header__button-holder {
+        text-align: center;
+    }
+
+    &__btn {
+        font-size: 20px;
+        
+        padding: 20px 30px;
+        color: $main-yellow;
+
+        @media(min-width: $tablet) {
+            font-size: 18px;
+        }
+    }
+
+    &__nav-opener {
+        background-color: transparent;
+        border: none;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 2;
+        cursor: pointer;
+       
+
+        & span,
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            height: 4px;
+            background-color: $main-yellow;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &::before {
+            top: 0;
+        }
+    
+        &::after {
+            bottom: 0;
+        }
+    
+        & span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @media(min-width: $tablet) {
+           display: none;
+        }
+    }
+}
+
+
