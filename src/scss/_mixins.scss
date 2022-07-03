@@ -1,0 +1,65 @@
+$breakpoints: (
+    "xs": 0,
+    "sm": 480px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1200px,
+    "xxl": 1400px,
+);
+
+@mixin xs {
+    @media(min-width: map-get($breakpoints, "xs")) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media(min-width: map-get($breakpoints, "sm")) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media(min-width: map-get($breakpoints, "md")) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media(min-width: map-get($breakpoints, "lg")) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media(min-width: map-get($breakpoints, "xl")) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media(min-width: map-get($breakpoints, "xxl")) {
+        @content;
+    }
+}
+
+
+// Rem, EM, % functions
+
+//TO %
+@function prc($pxOne, $pxTwo) {
+    $result: math.div($pxOne, $pxTwo) * 100%;
+    @return $result;
+}
+// TO REM
+@function rem($px) {
+    $result: math.div($px, 16) + rem;
+    @return $result;
+}
+// TO EM
+@function em($px) {
+    $result: math.div($px, 16) + em;
+    @return $result;
+}
+
+

@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1C121F;
+
+    @include xl {
+        &::before{
+            content: "";
+            width: 50%;
+            height: 990px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: rgba(79, 70, 78, 0.35);
+        }
+    }
+}
+
+.container {
+    max-width: 1310px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+.main-title {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 63px;
+    color: $mainTextColor;
+
+    & span {
+        color: $main-yellow;
+    }
+
+    @include md {
+        font-size: 85px;
+        line-height: 130px;
+    }
+}

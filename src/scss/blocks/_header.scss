@@ -3,6 +3,7 @@
     position: absolute;
     width: 100%;
     top: 0;
+    
 
     &_active {
         
@@ -41,7 +42,7 @@
         max-width: 48px;
         width: 100%;
 
-        @media(min-width: $tablet) {
+        @include md {
             max-width: 66px;
         }
     }
@@ -53,16 +54,17 @@
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 2;
+        z-index: 3;
         padding: 140px 45px 20px;
         background: rgba(79, 70, 78, 0.45);
         backdrop-filter: blur(30px);
         height: 100vh;
+        z-index: 4;
 
         transition: all 0.4s ease-in-out;
         transform: translateY(-100%);
 
-        @media(min-width: $tablet) {
+        @include md {
             visibility: visible;
             opacity: 1;
             position: static;
@@ -71,7 +73,7 @@
             padding: 0;
             background: transparent;
             transform: translateY(0);
-
+            backdrop-filter: none;
             display: flex;
             
         }
@@ -83,19 +85,15 @@
         margin-bottom: 80px;
         text-align: center;
 
-        @media(min-width: $tablet) {
+        @include md{
             margin: 0;
             display: flex;
             align-items: center;
-            margin: 0 10px 0 -40px;
+            margin: 0 10px 0 -30px;
         }
 
-        @media(min-width: $tabletLarge) {
+        @include lg {
             margin: 0 100px 0 -40px;
-        }
-
-        @media(min-width: $desktopMedium) {
-            margin: 0 160px 0 -40px;
         }
     }
 
@@ -105,8 +103,12 @@
             margin-bottom: 0;
         }
 
-        @media(min-width: $tablet) {
+        @include md {
             margin: 0;
+            padding: 0 30px;
+        }
+
+        @include lg {
             padding: 0 40px;
         }
     }
@@ -121,7 +123,7 @@
             color: $main-yellow;
         }
 
-        @media(min-width: $tablet) {
+        @include md {
             font-size: 18px;
         }
     }
@@ -148,12 +150,8 @@
     }
 
     &__btn {
-        font-size: 20px;
-        
-        padding: 20px 30px;
         color: $main-yellow;
-
-        @media(min-width: $tablet) {
+        @include xl {
             font-size: 18px;
         }
     }
@@ -164,7 +162,7 @@
         position: relative;
         width: 30px;
         height: 20px;
-        z-index: 2;
+        z-index: 4;
         cursor: pointer;
        
 
@@ -193,7 +191,7 @@
             transform: translateY(-50%);
         }
 
-        @media(min-width: $tablet) {
+        @include md {
            display: none;
         }
     }
