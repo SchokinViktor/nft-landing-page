@@ -10,18 +10,24 @@ body {
     @include xl {
         &::before{
             content: "";
-            width: 50%;
-            height: 990px;
+            width: 48%;
+            height: 780px;
             position: absolute;
             right: 0;
             top: 0;
             background: rgba(79, 70, 78, 0.35);
         }
     }
+
+    @include xxl {
+        &::before{
+            height: 990px;
+        }
+    }
 }
 
 .container {
-    max-width: 1310px;
+    max-width: 1660px; //1360px
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
@@ -31,8 +37,8 @@ body {
 .main-title {
     font-family: 'Oxanium', sans-serif;
     font-weight: 700;
-    font-size: 42px;
-    line-height: 63px;
+    font-size: 43px;
+    line-height: 153%;
     color: $mainTextColor;
 
     & span {
@@ -40,7 +46,10 @@ body {
     }
 
     @include md {
+        font-size: 60px;
+    }
+
+    @include xxl {
         font-size: 85px;
-        line-height: 130px;
     }
 }

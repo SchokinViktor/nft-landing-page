@@ -10,11 +10,11 @@
     padding: 15px;
 
     @include md {
-        min-height: 578px;
+        min-height: 500px;
         max-width: 382px;
     }
 
-    @include xl {
+    @include xxl {
         margin: 0;
         min-height: 718px;
         max-width: 556px;
@@ -58,7 +58,7 @@
         font-weight: 700;
         font-size: 22px;
         color: #fff;
-        @include xl {
+        @include xxl {
             font-size: 32px;
         }
     }
@@ -85,7 +85,7 @@
         @include md {
             font-size: 24px;
         }
-        @include xl {
+        @include xxl {
             font-size: 28px;
         }
     }
@@ -98,7 +98,7 @@
         @include md {
             font-size: 18px;
         }
-        @include xl {
+        @include xxl {
             font-size: 24px;
         }
 
@@ -111,7 +111,7 @@
             padding: 15px 0;
             margin-right: -30px;
         }
-        @include xl {
+        @include xxl {
             font-size: 24px;
             max-width: 205px;
             padding: 21px 0;

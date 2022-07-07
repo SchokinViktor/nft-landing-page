@@ -4,9 +4,9 @@
     display: inline-block;
 
     max-width: 187px;
+    padding: 15px;
     width: 100%;
-    padding: 16px 20px;
-    
+
     cursor: pointer;
 
     text-align: center;
@@ -26,22 +26,22 @@
         background: rgba(43, 42, 41, 0.807);
     }
 
-    @include md {
-        padding: 20px;
-        font-size: 24px;
+    @include xxl {
         max-width: 257px;
+        padding: 23px 15px;
+        font-size: 28px;
     }
 }
 
 .btn_small{
     @extend .btn;
-    max-width: 155px;
+    //max-width: 155px;
 }
 
 .btn_large {
     @extend .btn;
-    max-width: 270px;
-    padding: 13px 0;
+    //max-width: 270px;
+    //padding: 13px 0;
     background: rgba(233, 215, 167, 0.1);
     border: 1px solid #BCB39A;
 }
@@ -50,22 +50,25 @@
     @extend .btn;
     background-color: $main-yellow;
     color: $mainBlack;
+
+    &:hover {
+        background: $mainOrange;
+    }
+
+    &:active {
+        background: #bb922b;
+    }
 }
 
 
 .btn_yellow_small {
     @extend .btn_yellow;
-    max-width: 121px;
-    padding: 8px 0;
+   // max-width: 121px;
+    //padding: 8px 0;
     font-size: 16px;
 }
 
 .btn_orange {
     @extend .btn_yellow;
     background-color: $mainOrange;
-}
-
-.btn_brown {
-    @extend .btn;
-    background: #594846;
 }

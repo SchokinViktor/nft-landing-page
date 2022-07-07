@@ -6,6 +6,10 @@
     @include xl {
         padding-top: 140px;
     }
+    
+    @include xxl {
+        padding-top: 170px;
+    }
 
     &::before {
         content: "";
@@ -28,10 +32,10 @@
     &::after {
         content: "";
         width: 100%;
-        height: 489px;
+        height: 500px;
         position: absolute;
         left: 0;
-        bottom: 115px;
+        bottom: 195px;
         background: rgba(79, 70, 78, 0.35);
         backdrop-filter: blur(30px);
 
@@ -54,60 +58,45 @@
         padding-top: 52px;
         position: relative;
         z-index: 3;
-
-        @include xl {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
-
-    &__col {
-       margin-bottom: 50px;
-
-       &_left {
-          
-       }
-
-       &_right {
-           margin-bottom: 90px;
-           @include xl {
-                display: flex;
-                justify-content: flex-end;
-                margin-bottom: 0;
-                width: 50%;
-           }
-       }
-
-       @include xl {
-            width: 50%;
-            margin-bottom: 0;
-       }
     }
 
     .hero__card {
-        margin: 0 auto;
+        position: absolute;
+        bottom: 135px;
+        right: 50%;
+        transform: translateX(50%);
 
         @include xl {
-            margin: 0;
+            transform: translateX(-30%);
+            right: 0;
+            bottom: 130px;
+        }
+
+        @include xxl {
+            transform: translateX(0);
+            right: 0;
         }
     }
 
     &__title-holder {
         margin: 0 auto 55px;
         text-align: center;
-        max-width: 710px;
+        max-width: 560px;
         width: 100%;
 
         @include md {
-            margin: 0 auto 65px;
+            margin: 0 auto 65px auto;
         }
 
         @include xl {
             text-align: left;
-            margin: 0 0 118px 0;
+            margin: 0 0 65px;
         }
 
+        @include xxl {
+            margin: 0 0 118px;
+            max-width: 710px;
+        }
     }
 
     &__btn-list {
@@ -116,46 +105,86 @@
        margin: 0 auto;
        display: flex;
        text-align: center;
+       gap: 20px;
+       //new
+        margin-bottom: 500px;
 
        @include xl {
             text-align: left;
-            margin: 0 -8px 121px -8px;
+            margin: 0 -20px 90px -20px;
+            display: block;
+            max-width: none;
+       }
+
+       @include xl {
+            margin: 0 -20px 120px -20px;
        }
     }
 
     &__btn-item {
-        width: 100%;
         display: inline;
-        padding: 0 8px;
+        width: 100%;
+        @include xl {
+            padding: 0 20px;
+       }
     }
+
+    // &__counter-list {
+    //     display: flex;
+    //     justify-content: center;
+    //     gap: 20px;
+        
+    //     @include sm {
+    //         gap: 40px;
+    //     }
+
+    //     @include xl {
+    //         display: none;
+    //     }
+
+    //     &_desktop {
+    //         display: none;
+
+    //         @include xl {
+    //             display: flex;
+    //             justify-content: start;
+    //             gap: 65px;
+    //         }
+
+    //         @include xxl {
+    //             display: flex;
+    //             justify-content: start;
+    //             gap: 103px;
+    //         }
+    //     }
+    // }
 
     &__counter-list {
         display: flex;
         justify-content: center;
+        gap: 20px;
+        
+        @include sm {
+            gap: 40px;
+        }
+
         @include xl {
-            display: none;
+            display: flex;
+            justify-content: start;
+            gap: 65px;
         }
 
-        &_desktop {
-            display: none;
-
-            @include xl {
-                display: flex;
-                justify-content: start;
-                margin: 0 -45px;
-            }
-
-           
+        @include xxl {
+            display: flex;
+            justify-content: start;
+            gap: 103px;
         }
+        
     }
 
-    &__counter-item {
-        padding: 0 10px;
-        text-align: center;
 
-        @include sm {
-            padding: 0 45px;
-        }
+    &__counter-item {
+        text-align: center;
     }
 
     &__counter-number {
@@ -167,6 +196,10 @@
         @include md {
             font-size: 52px;
         }
+
+        @include xxl {
+            font-size: 62px;
+        }
     }
 
     &__counter-title {
@@ -177,6 +210,10 @@
 
         @include md {
             font-size: 20px;
+        }
+
+        @include xxl {
+            font-size: 24px;
         }
     }
 
