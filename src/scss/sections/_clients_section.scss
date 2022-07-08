@@ -1,0 +1,43 @@
+.clients {
+    margin-bottom: 92px;
+
+    @include xl {
+        margin-bottom: 104px;
+    }
+
+    &__container {
+    }
+
+    &__list {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        
+        @include md {
+            max-width: 500px;
+        }
+        @include xl {
+            max-width: 1100px;
+        }
+
+        @include xxl {
+            max-width: 1235px;
+        }
+    }
+
+    &__item {
+        max-width: 130px;
+        margin-bottom: 16px;
+        padding: 0 10px;
+        @include md {
+            max-width: 170px;
+        }
+        @include xl {
+            max-width: none;
+        }
+    }
+}

@@ -2,9 +2,11 @@
     padding-top: 93px;
     position: relative;
     overflow: hidden;
+    margin-bottom: 74px;
 
     @include xl {
         padding-top: 140px;
+        margin-bottom: 184px;
     }
     
     @include xxl {
@@ -189,6 +191,10 @@
 
     .hero__btn-brown {
         background-color: #594846;
+
+        &:hover {
+            background-color: #3c302e;
+        }
     }
 
 }
